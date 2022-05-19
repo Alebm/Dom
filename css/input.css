@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.container{
+    @apply  flex flex-col my-4 
+}
+
+.h1{
+    @apply text-blue-600 m-3 text-center text-xl
+}
+
+.h2{
+    @apply text-blue-900 m-3 text-center text-lg
+}
+
+.titulos{
+
+    @apply my-4 bg-blue-200 rounded-xl shadow-md
+
+
+}
+
+.label{
+    @apply text-white mt-2
+}
+
+.section{
+    @apply flex flex-wrap justify-evenly gap-x-16 my-4
+}
+
+.form{
+    @apply bg-blue-200 p-3 mb-5 rounded-lg shadow-lg
+}
+
+.bordes{
+    @apply ring-1 ring-white rounded outline-none w-full focus:ring-2 focus:ring-blue-500 mb-2 shadow-xl
+}
+
+.button{
+    @apply bg-blue-900 text-white py-1 px-2 rounded-lg hover:bg-blue-500 text-xs mt-2 mb-2
+}
