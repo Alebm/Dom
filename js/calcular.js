@@ -54,7 +54,7 @@ inputs[7].addEventListener("click", () =>{
 
         for (const salida of salidas) {
         
-            label = document.createElement("label").setAttribute("id", "salidas");
+            label = document.createElement("label");
             label.className="label";
             label.innerText = salida;
             divs[2].appendChild(label);
@@ -76,15 +76,14 @@ inputs[11].addEventListener("click", () =>{
     El pago total es ${pagoTotal}` ];
 
     let label
-    console.log(label);
 
 
         for (const salida of salidas) {
         
-            label = document.createElement("label").setAttribute("id", "salidas");
+            label = document.createElement("label");
             label.className="label";
             label.innerText = salida;
-            divs[2].appendChild(label);
+            divs[3].appendChild(label);
         
     
             
@@ -107,10 +106,10 @@ inputs[15].addEventListener("click", () =>{
 
         for (const salida of salidas) {
         
-            label = document.createElement("label").setAttribute("id", "salidas");
+            label = document.createElement("label");
             label.className="label";
             label.innerText = salida;
-            divs[2].appendChild(label);
+            divs[4].appendChild(label);
         
     
             
