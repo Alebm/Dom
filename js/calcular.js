@@ -3,45 +3,38 @@ const inputs = document.getElementsByTagName("input");
 const btns = document.getElementsByTagName("button");
 const labels = document.getElementsByTagName("label");
 
-/* let inputValorPrestamo = document.getElementById("ValorPrestamo")
-let resultadoPrestamo = document.getElementById("ResultadoPrestamo")
-let calcular = document.getElementById("Calcular");
- */
-
-let calculo;
-
-let exponente = Math.pow(3,2);
-console.log(exponente);
-
-let divisor 
-let dividendo 
+const calcular = document.getElementById("Calcular");
 
 
 function cuotaDelPrestamo(valorprestamo,meses,tasa){
 
 
-    /* dividendo = valorprestamo*tasa;
-    divisor = 1-((Math.pow((1+tasa),-meses)));
+    cuota = Math.round((valorprestamo*tasa)/(1-((Math.pow((1+tasa),-meses)))));
 
-    cuota = dividendo/divisor; */
-    
-
-    cuota = (valorprestamo*tasa)/(1-((Math.pow((1+tasa),-meses))));
+    pagoTotal = cuota*meses;
 
 }
 
 
 
-inputs[3].addEventListener("click", () =>{
+calcular.addEventListener("click", () =>{
 
-    cuotaDelPrestamo(document.getElementById("ValorPrestamo").value,document.getElementById("meses").value,document.getElementById("tasa").value);
-    console.log(document.getElementById("ValorPrestamo").value);
-    console.log(document.getElementById("meses").value);
-    console.log(document.getElementById("tasa").value);
+    cuotaDelPrestamo(parseInt(inputs[0].value),parseInt(inputs[1].value),parseFloat(inputs[2].value));
 
-    console.log(cuota);
+    const salidas = [`La cuota es de ${cuota} `,`
+    El pago total es ${pagoTotal}` ];
 
-    labels[3].innerText = `la cuota es de ${cuota}` ;
+    for (const salida of salidas) {
+        
+        let label = document.createElement("label");
+        label.className="label";
+        label.innerText = salida;
+        divs[1].appendChild(label);
+
+
+}
+
+
 
 });
 
@@ -49,25 +42,79 @@ inputs[3].addEventListener("click", () =>{
 
 inputs[7].addEventListener("click", () =>{
 
-    calculo = inputs[4].value*inputs[5].value*inputs[6].value;
 
-    labels[7].innerText = `El prestamo solicitado es ${calculo}` ;
+    cuotaDelPrestamo(parseInt(inputs[4].value),parseInt(inputs[5].value),parseFloat(inputs[6].value));
+
+    const salidas = [`La cuota es de ${cuota} `,`
+    El pago total es ${pagoTotal}` ];
+
+    let label
+    console.log(label);
+
+
+        for (const salida of salidas) {
+        
+            label = document.createElement("label").setAttribute("id", "salidas");
+            label.className="label";
+            label.innerText = salida;
+            divs[2].appendChild(label);
+        
+    
+            
+        }
+
 
 });
 
 inputs[11].addEventListener("click", () =>{
 
-    calculo = inputs[8].value*inputs[9].value*inputs[10].value;
 
-    labels[11].innerText = `El prestamo solicitado es ${calculo}` ;
+
+    cuotaDelPrestamo(parseInt(inputs[8].value),parseInt(inputs[9].value),parseFloat(inputs[10].value));
+
+    const salidas = [`La cuota es de ${cuota} `,`
+    El pago total es ${pagoTotal}` ];
+
+    let label
+    console.log(label);
+
+
+        for (const salida of salidas) {
+        
+            label = document.createElement("label").setAttribute("id", "salidas");
+            label.className="label";
+            label.innerText = salida;
+            divs[2].appendChild(label);
+        
+    
+            
+        }
 
 });
 
 inputs[15].addEventListener("click", () =>{
 
-    calculo = inputs[12].value*inputs[13].value*inputs[14].value;
 
-    labels[15].innerText = `El prestamo solicitado es ${calculo}` ;
+
+    cuotaDelPrestamo(parseInt(inputs[12].value),parseInt(inputs[13].value),parseFloat(inputs[14].value));
+
+    const salidas = [`La cuota es de ${cuota} `,`
+    El pago total es ${pagoTotal}` ];
+
+    let label
+    console.log(label);
+
+
+        for (const salida of salidas) {
+        
+            label = document.createElement("label").setAttribute("id", "salidas");
+            label.className="label";
+            label.innerText = salida;
+            divs[2].appendChild(label);
+        
+    
+            
+        }
 
 });
 
