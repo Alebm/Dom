@@ -3,6 +3,8 @@ const inputs = document.getElementsByTagName("input");
 const btns = document.getElementsByTagName("button");
 const labels = document.getElementsByTagName("label");
 
+console.log(labels);
+
 const calcular = document.getElementById("Calcular");
 
 
@@ -15,7 +17,7 @@ function cuotaDelPrestamo(valorprestamo,meses,tasa){
 
 }
 
-
+//con el clic hago la oepracion de la cuota, y quiero reemplazar el valor si ya lo hice una vez, lo logre hacer así pero el else no es optimo
 
 calcular.addEventListener("click", () =>{
 
@@ -24,21 +26,32 @@ calcular.addEventListener("click", () =>{
     const salidas = [`La cuota es de ${cuota} `,`
     El pago total es ${pagoTotal}` ];
 
-    for (const salida of salidas) {
+    if(!document.getElementById("salidas")){
+
+        for (const salida of salidas) {
         
-        let label = document.createElement("label");
-        label.className="label";
-        label.innerText = salida;
-        divs[1].appendChild(label);
+            let label = document.createElement("label");
+            label.setAttribute("ID","salidas");
+            label.className="label";
+            label.innerText = salida;
+            divs[1].appendChild(label);
+            console.log(labels);
 
+        }
+    }else{
 
-}
-
+    //este else no me convence
+            labels[3].innerText = `La cuota es de ${cuota} 
+            `;
+            labels[4].innerText = ` El pago total es ${pagoTotal}`;
+        
+    
+    }
 
 
 });
 
- 
+
 
 inputs[7].addEventListener("click", () =>{
 
