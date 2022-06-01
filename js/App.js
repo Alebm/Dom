@@ -21,6 +21,8 @@ const btn = document.querySelector('#switch');
         
         });
 
+        //traigo el modo oscuro
+
 if(localStorage.getItem('dark-mode')==='true'){
     document.body.classList.add('dark');
     btn.classList.add('active');
