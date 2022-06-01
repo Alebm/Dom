@@ -3,7 +3,31 @@ const inputs = document.getElementsByTagName("input");
 const btns = document.getElementsByTagName("button");
 const labels = document.getElementsByTagName("label");
 
-console.log(labels);
+//Manejamso el boton para darle modo oscuro
+
+const btn = document.querySelector('#switch');
+
+        btn.addEventListener('click', () => {
+
+            document.body.classList.toggle('dark');
+            btn.classList.toggle('active');
+
+            //guardar el modo en localstorage
+            if(document.body.classList.contains('dark')){
+                localStorage.setItem('dark-mode', 'true');
+            }else{
+                localStorage.setItem('dark-mode', 'false');
+            }
+        
+        });
+
+if(localStorage.getItem('dark-mode')==='true'){
+    document.body.classList.add('dark');
+    btn.classList.add('active');
+}else{
+    document.body.classList.remove('dark');
+    btn.classList.remove('active');
+}
 
 const calcular = document.getElementById("Calcular");
 

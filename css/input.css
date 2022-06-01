@@ -3,35 +3,39 @@
 @tailwind utilities;
 
 
+
+
+
 .container{
     @apply  flex flex-col my-4 
 }
 
 .h1{
-    @apply text-blue-600 m-3 text-center text-xl
+    @apply text-blue-600 m-3 text-center text-xl  dark:text-white dark:font-bold transition-all
 }
 
+
 .h2{
-    @apply text-blue-900 m-3 text-center text-lg
+    @apply text-blue-900 m-3 text-center text-lg dark:text-white dark:font-bold transition-all
 }
 
 .titulos{
 
-    @apply my-4 bg-blue-200 rounded-xl shadow-md
+    @apply my-4 bg-blue-200 rounded-xl shadow-md dark:bg-blue-600
 
 
 }
 
 .label{
-    @apply text-white mt-2
+    @apply text-white mt-2 dark:font-bold 
 }
 
 .section{
-    @apply flex flex-wrap justify-evenly gap-x-16 my-4
+    @apply flex flex-wrap justify-evenly gap-x-16 my-4 
 }
 
 .form{
-    @apply bg-blue-200 p-3 mb-5 rounded-lg shadow-lg
+    @apply bg-blue-200 p-3 mb-5 rounded-lg shadow-lg dark:bg-blue-600
 }
 
 .bordes{
@@ -39,5 +43,82 @@
 }
 
 .button{
-    @apply bg-blue-900 text-white py-1 px-2 rounded-lg hover:bg-blue-500 text-xs mt-2 mb-2
+    @apply bg-blue-900 text-white py-1 px-2 rounded-lg hover:bg-blue-500 text-xs mt-2 mb-2 dark:font-bold 
 }
+
+body{
+    transition: .3s ease all;
+}
+
+body.dark{
+    background: black;
+    transition: .3s ease all;
+}
+
+.switch{
+    width: 60px;
+    background: gray;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+
+}
+
+.switch::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+}
+
+.switch.active{
+    background: orange;
+    color: black;
+
+}
+.switch.active::after{
+    right: 0;
+    left: unset;
+}
+
+span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: white;
+    
+}
+
+
+
+/* #checkbox:checked ~ .btn-change::before {
+    transition: 0.3s;
+    transform: translateX(23px);
+ }
+ 
+ .btn-change {
+    background-color: var(--bg-btn);
+ }
+ 
+ .btn-change::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--btn-color);
+    transition: 0.3s;
+    transform: translateX(0);
+ } */
