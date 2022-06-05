@@ -50,10 +50,33 @@ const calcular = document.getElementById("Calcular");
 
 function cuotaDelPrestamo(valorprestamo,meses,tasa){
 
+    if(isNaN(valorprestamo,meses,tasa)){
+
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'algo anda mal, revisa los datos',
+            //footer: '<a href="">Why do I have this issue?</a>'
+        });
+
+
+    }else{
 
     cuota = Math.round((valorprestamo*tasa)/(1-((Math.pow((1+tasa),-meses)))));
 
     pagoTotal = cuota*meses;
+
+    Swal.fire(
+        'Calculamos tu prestamo',
+        'clic para continuar',
+        'success'
+    );
+
+
+    }
+
+    
+
 
 }
 
@@ -142,6 +165,8 @@ inputs[11].addEventListener("click", () =>{
             
         }
 
+     
+       
 });
 
 inputs[15].addEventListener("click", () =>{
