@@ -50,6 +50,8 @@ const calcular = document.getElementById("Calcular");
 
 function cuotaDelPrestamo(valorprestamo,meses,tasa){
 
+    //*integramos sweet alert y condicionado*//
+
     if(isNaN(valorprestamo,meses,tasa)){
 
         Swal.fire({
