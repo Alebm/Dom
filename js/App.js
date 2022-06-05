@@ -13,26 +13,40 @@ const btn = document.querySelector('#switch');
             btn.classList.toggle('active');
 
             //guardar el modo en localstorage
-            if(document.body.classList.contains('dark')){
+
+            
+
+            //?comentamos la forma tradicional 
+        /*if(document.body.classList.contains('dark')){
                 localStorage.setItem('dark-mode', 'true');
             }else{
                 localStorage.setItem('dark-mode', 'false');
-            }
+            } */
+
+            //*habilitamos operador ternario*//
+            document.body.classList.contains = 'dark' ? localStorage.setItem('dark-mode', 'true') : localStorage.setItem('dark-mode', 'false')
         
         });
 
         //traigo el modo oscuro
 
-if(localStorage.getItem('dark-mode')==='true'){
+
+
+        //?comentamos la forma tradicional 
+/* if(localStorage.getItem('dark-mode')==='true'){
     document.body.classList.add('dark');
     btn.classList.add('active');
 }else{
     document.body.classList.remove('dark');
     btn.classList.remove('active');
-}
+} */
+
+        //*habilitamos operador ternario*//
+        localStorage.getItem('dark-mode') === 'true' ? document.body.classList.add('dark') : document.body.classList.remove('dark')
+        localStorage.getItem('dark-mode') === 'true' ? btn.classList.add('active') :  btn.classList.remove('active')
+
 
 const calcular = document.getElementById("Calcular");
-
 
 function cuotaDelPrestamo(valorprestamo,meses,tasa){
 
