@@ -518,6 +518,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
   font-size: 1.25rem;
   line-height: 1.75rem;
+  font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
   transition-property: all;
@@ -536,6 +537,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
   font-size: 1.125rem;
   line-height: 1.75rem;
+  font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(30 58 138 / var(--tw-text-opacity));
   transition-property: all;
@@ -567,12 +569,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .label {
   margin-top: 0.5rem;
+  font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(30 58 138 / var(--tw-text-opacity));
 }
 
 .dark .label {
   font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .section {
@@ -630,24 +635,38 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.5rem;
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   font-size: 0.75rem;
   line-height: 1rem;
+  font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(30 58 138 / var(--tw-text-opacity));
 }
 
 .button:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .dark .button {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
   font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.dark .button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(30 58 138 / var(--tw-text-opacity));
 }
 
 body{
