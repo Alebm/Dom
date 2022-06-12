@@ -197,6 +197,21 @@ inputs[15].addEventListener("click", () =>{
 
 });
 
+//fetch
+
+
+fetch("https://api.polygon.io/v2/aggs/ticker/AAPL/range/1/day/2020-06-01/2020-06-17?apiKey=LPkWQYEYVUgiczVqrNNRkwTMZTjRCKSq")
+    .then((Response)=>Response.json())
+    .then((json)=>  {for (const data in json) {
+        console.log(data);
+   }});
+
+
+/* fetch("http://api.marketstack.com/v1/eod?access_key=2079e1f1ef40849cdcdf75ecc2815d8c&symbols=AAPL")
+  .then(response => console.log(response))
+  .then(data => console.log(data))
+  .catch(error => console.log(error.message)); */
+
 
 
 
